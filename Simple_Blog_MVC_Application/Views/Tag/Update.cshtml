@@ -1,0 +1,22 @@
+﻿@model Domain.ViewModels.TagUpdateViewModel
+@{
+    ViewData["Title"] = "Update Tag";
+}
+<h1>Update Tag</h1>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+    
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary ms-2">Cancel</a>
+</form>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Domain.Models.Tag>
+@{
+    ViewData["Title"] = "Tag Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Tags Index</h1>
+    <p>You can use any control button</p>
+    
+    <a class="btn btn-primary" style="margin-bottom:20px;" href="@Url.Action("Create")">Create New</a>
+</div>
+
+<table class="table table-bordered">
+    <thead class="table-light">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach(var tag in Model)
+    {
+        <tr>
+            <td>@tag.Id</td>
+            <td>@tag.Name</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+

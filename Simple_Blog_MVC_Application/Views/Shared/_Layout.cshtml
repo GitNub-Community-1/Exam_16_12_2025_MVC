@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+
+        <meta charset="utf-8" />
+        <title>@ViewData["Title"]</title>
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="~/assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+        <!-- Icons -->
+        <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+    <!-- body start -->
+    <body data-menu-color="light" data-sidebar="default">
+
+        <div id="app-layout">
+            <!-- Topbar Start -->
+            <div class="topbar-custom">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between">
+                        <ul class="list-unstyled topnav-menu mb-0 d-flex align-items-center">
+                            <li>
+                                <button class="button-toggle-menu nav-link">
+                                    <i data-feather="menu" class="noti-icon"></i>
+                                </button>
+                            </li>
+                            <li class="d-none d-lg-block">
+                                <h5 class="mb-0">Mini Shop</h5>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end Topbar -->
+
+            <!-- Left Sidebar Start -->
+            <div class="app-sidebar-menu">
+                <div class="h-100" data-simplebar>
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <div class="logo-box">
+                            <a asp-controller="Home" asp-action="Index" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="~/assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="~/assets/images/logo-light.png" alt="" height="24">
+                                </span>
+                            </a>
+                            <a asp-controller="Home" asp-action="Index" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="~/assets/images/logo-sm.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="~/assets/images/logo-dark.png" alt="" height="24">
+                                </span>
+                            </a>
+                        </div>
+
+                        <ul id="side-menu">
+
+                            <li>
+                                <a href="#sidebarDashboards" data-bs-toggle="collapse">
+                                    <i data-feather="catalog"></i>
+                                    <span> Каталог </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="sidebarDashboards">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a asp-controller="Category" asp-action="Index" class="tp-link">Категория товаров</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Product" asp-action="Index" class="tp-link">Продукты</a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Order" asp-action="Index" class="tp-link">Заявки</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    @RenderBody()
+                </div>
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col fs-13 text-muted text-center">
+                                &copy; <script>document.write(new Date().getFullYear())</script> - Made with <span class="mdi mdi-heart text-danger"></span> by <a href="#!" class="text-reset fw-semibold">Softclub</a> 
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+                
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Vendor -->
+        <script src="~/assets/libs/jquery/jquery.min.js"></script>
+        <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="~/assets/libs/node-waves/waves.min.js"></script>
+        <script src="~/assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="~/assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+        <script src="~/assets/libs/feather-icons/feather.min.js"></script>
+
+        <!-- Apexcharts JS -->
+        <script src="~/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+        <!-- for basic area chart -->
+        <script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+
+        <!-- Widgets Init Js -->
+        <script src="~/assets/js/pages/crm-dashboard.init.js"></script>
+
+        <!-- App js-->
+        <script src="~/assets/js/app.js"></script>
+
+    </body>
+</html>
