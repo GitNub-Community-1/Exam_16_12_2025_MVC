@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Exam_16_12_2025\\Domain\\Domain.csproj": {}
+    "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Home_Authorization_in_exam_project\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Exam_16_12_2025\\Domain\\Domain.csproj": {
+    "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Home_Authorization_in_exam_project\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Exam_16_12_2025\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Home_Authorization_in_exam_project\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Exam_16_12_2025\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Home_Authorization_in_exam_project\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\LLC LEADER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Exam_16_12_2025\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\LLC LEADER\\OneDrive\\Рабочий стол\\WebApiDotnet\\Home_Authorization_in_exam_project\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LLC LEADER\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -47,6 +47,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

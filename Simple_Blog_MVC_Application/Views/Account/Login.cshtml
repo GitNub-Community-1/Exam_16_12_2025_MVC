@@ -1,0 +1,30 @@
+@model Domain.Dtos.LoginDto
+
+<!-- Login Section -->
+
+
+<div >
+    <p style="text-align: center; margin-top: 100px; font-size: xxx-large;">Welcome.</p>
+    <div style="display: flex;justify-content: center;flex-direction: column; align-content: center; align-items: center; ">
+        <form style="display: flex;flex-direction: column;gap:50px; background-color: #fff9ea; border-radius: 30px; border-color: black; max-width: 600px;  padding-bottom: 50px; padding-top: 70px; padding-left: 100px; padding-right: 100px;"  method="post" action="login">
+            <input type="hidden" asp-for="ReturnUrl"/>
+            <div style="display:flex; gap:50px; justify-content: center;align-content: center;" >
+                <label for="email" >Email: </label>
+                <input style="border-color: #0d6af4;border-radius: 18px; background-color: white;" asp-for="Username" id="email" placeholder="john" ></input>
+                <span class="text-red-500" asp-validation-for="Username"></span>
+            </div>
+
+            <div  style="display:flex; gap:50px; justify-content: center;align-content: center;" >
+                <label for="password" class="text-lg">Password</label>
+                <input style="border-color: #0d6af4;border-radius: 18px; background-color: white;" asp-for="Password" type="password" id="password" placeholder="Password"></input> 
+                <span class="text-red-500" asp-validation-for="Password"></span>
+            </div>
+
+            <input style="border-color: #9efffd;border-radius: 20px;background-color: #fff9ea" type="submit" value="Log In" >
+        </form>
+    </div>
+    <div asp-validation-summary="All"></div>
+    <div class="text-center pt-12 pb-12">
+        <p>Don't have an account? <a href="/account/register" >Register here.</a></p>
+    </div>
+</div>

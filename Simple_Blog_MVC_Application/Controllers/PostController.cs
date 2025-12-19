@@ -2,9 +2,11 @@
 using Domain.Models;
 using Domain.ViewModels;
 using Infastructure.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Simple_Blog_MVC_Application.Controllers;
+
 
 public class PostController(IPostService _service) : Controller
 {
@@ -70,7 +72,7 @@ public class PostController(IPostService _service) : Controller
         await _service.UpdatePostAsync(model);
         return RedirectToAction("Index");
     }
-
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {

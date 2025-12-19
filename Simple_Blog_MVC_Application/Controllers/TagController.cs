@@ -1,6 +1,7 @@
 ﻿using Domain.Filters;
 using Domain.ViewModels;
 using Infastructure.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Simple_Blog_MVC_Application.Controllers;
@@ -28,6 +29,7 @@ public class TagController(ITagService service) : Controller
         var tag = await service.AddTagAsync(model);
         return RedirectToAction("Index");
     }
+    [Authorize]
     public async Task<IActionResult> Delete([FromRoute] int Id)
     {
         await service.DeleteTagAsync(Id);

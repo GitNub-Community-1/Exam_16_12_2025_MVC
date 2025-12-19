@@ -1,0 +1,58 @@
+@model Domain.Dtos.RegisterDto
+
+<div style="display: flex;justify-content: center;flex-direction: column; align-content: center; align-items: center; ">
+  <p style="text-align: center; padding-top: 50px; font-size:xxx-large;">Регистрация</p>
+  <form method="post" action="register" style="display: flex;flex-direction: column;gap:50px; background-color: #fff9ea; border-radius: 30px; border-color: black; max-width: 600px;  padding-bottom: 50px; padding-top: 70px; padding-left: 100px; padding-right: 100px;">
+
+    <div style="display:flex; gap:50px; justify-content: center;align-content: center;">
+      <label for="name" class="text-lg">FirstName</label>
+      <input   style="border-color: #0d6af4;border-radius: 18px; background-color: white;"  type="text" asp-for="FirstName" id="FirstName" placeholder="John" />
+      <span class="text-red-500" asp-validation-for="FirstName"></span>
+    </div>
+    <div style="display:flex; gap:50px; justify-content: center;align-content: center;">
+      <label for="name" class="text-lg">LastName</label>
+      <input  style="border-color: #0d6af4;border-radius: 18px; background-color: white;"  type="text" asp-for="LastName" id="LastName" placeholder="Smith"  />
+      <span class="text-red-500" asp-validation-for="LastName"></span>
+    </div>
+
+    <div style="display:flex; gap:50px; justify-content: center;align-content: center;">
+      <label for="name" class="text-lg">Username</label>
+      <input  style="border-color: #0d6af4;border-radius: 18px; background-color: white;"  type="text" asp-for="Username" id="name" placeholder="John" />
+      <span class="text-red-500" asp-validation-for="Username"></span>
+    </div>
+    <div style="display:flex; gap:50px; justify-content: center;align-content: center;" >
+      <label for="email" class="text-lg">Email</label>
+      <input  style="border-color: #0d6af4;border-radius: 18px; background-color: white;"  type="email" asp-for="Email" id="email" placeholder="your@email.com" />
+      <span class="text-red-500" asp-validation-for="Email"></span>
+    </div>
+
+    <div  style="display:flex; gap:50px; justify-content: center;align-content: center;">
+      <label for="phone" class="text-lg">Phone</label>
+      <input   style="border-color: #0d6af4;border-radius: 18px; background-color: white;"  type="text" asp-for="PhoneNumber" id="phone" placeholder="992900443322"  />
+      <span class="text-red-500" asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div  style="display:flex; gap:50px; justify-content: center;align-content: center;">
+      <label for="password" class="text-lg">Password</label>
+      <input    style="border-color: #0d6af4;border-radius: 18px; background-color: white;" type="password" asp-for="Password" id="password" placeholder="Password" />
+      <span class="text-red-500" asp-validation-for="Password"></span>
+
+    </div>
+
+    <div  style="display:flex; gap:50px; justify-content: center;align-content: center;">
+      <label for="confirm-password" class="text-lg">Confirm Password</label>
+      <input   style="border-color: #0d6af4;border-radius: 18px; background-color: white;" type="password" asp-for="ConfirmPassword" id="confirm-password" placeholder="Password"  />
+      <span class="text-red-500" asp-validation-for="ConfirmPassword"></span>
+
+    </div>
+
+    <div asp-validation-summary="All"  data-valmsg-summary="true">
+      <ul>
+        <li style="display:none"></li>
+      </ul>
+    </div>
+    <input type="submit" value="Register"  style="border-color: #9efffd;border-radius: 20px;background-color: #fff9ea"/>
+  </form>
+  <div style="text-align: center; padding-top: 50px; ">
+    <p style="font-size: medium;">Already have an account? <a href="/account/login" class="underline font-semibold">Log in here.</a></p>
+  </div>
+</div>
